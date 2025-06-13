@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Label } from './ui/label';
 import { useDispatch } from 'react-redux';
@@ -40,7 +40,6 @@ const FilterCard = () => {
       transition={{ duration: 0.1 }}
       className="w-full bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300"
     >
-      
       <hr className="mb-6 border-gray-300" />
 
       {/* Filter Sections */}
@@ -48,14 +47,10 @@ const FilterCard = () => {
         {filterData.map((data, index) => (
           <motion.div
             key={data.filterType}
-                        initial={{ opacity: 0, x: -10 }}
+            initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.3, delay: index * 0.1 }}
-=======
-transition={{ duration: 0.3, delay: index * 0.1 }}
->>>>>>> bc15f544edddd494251bc0932c711dbccb29f7ad
             className="mb-6"
           >
             {/* Enhanced Section Title */}
